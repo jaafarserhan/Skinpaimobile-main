@@ -424,3 +424,490 @@ if (error) return <ErrorMessage error={error} />;
 ---
 
 **Happy coding! 🎉**
+
+# SkinPAI Business Documentation
+
+**Version:** 1.0  
+**Last Updated:** February 21, 2026
+
+---
+
+## Table of Contents
+
+1. [Executive Summary](#1-executive-summary)
+2. [Product Features](#2-product-features)
+3. [User Journey & Flows](#3-user-journey--flows)
+4. [Monetization Model](#4-monetization-model)
+5. [Business Rules](#5-business-rules)
+6. [Market Positioning](#6-market-positioning)
+7. [Success Metrics](#7-success-metrics)
+
+---
+
+## 1. Executive Summary
+
+### 1.1 Product Vision
+
+**SkinPAI** is an AI-powered skincare analysis mobile application that helps users understand their skin health, receive personalized product recommendations, and connect with a community of skincare enthusiasts.
+
+### 1.2 Value Proposition
+
+| For Users | For Partners |
+|-----------|--------------|
+| Instant skin analysis using AI | Product visibility to target audience |
+| Personalized product recommendations | Data-driven marketing insights |
+| Track skin improvement over time | Affiliate sales channel |
+| Learn from skincare experts | Brand awareness in Iraq market |
+
+### 1.3 Target Market
+
+- **Primary:** Iraq (Basra region)
+- **Demographics:** Ages 18-45, predominantly female
+- **Focus:** Skincare-conscious consumers
+- **Currency:** Iraqi Dinar (IQD)
+
+---
+
+## 2. Product Features
+
+### 2.1 Core Features
+
+#### AI Skin Scanner
+- **What:** Users take a photo of their face
+- **How:** AI analyzes skin for 12+ metrics
+- **Output:** Detailed report with scores, concerns, and recommendations
+
+#### Skin Health Metrics Analyzed
+| Metric | Description | Scale |
+|--------|-------------|-------|
+| Overall Score | Combined health rating | 0-100 |
+| Hydration | Skin moisture level | 0-100 |
+| Texture | Smoothness and evenness | 0-100 |
+| Pore Visibility | Size and visibility of pores | 0-100 |
+| Acne Severity | Active breakouts and scarring | 0-100 |
+| Wrinkles | Fine lines and wrinkles | 0-100 |
+| Pigmentation | Dark spots, uneven tone | 0-100 |
+| Elasticity | Skin firmness | 0-100 |
+| Oil Level | Sebum production | 0-100 |
+| Radiance | Skin glow and brightness | 0-100 |
+| Estimated Skin Age | AI-estimated biological skin age | Years |
+
+#### Product Recommendations
+- Personalized based on scan results
+- Matched to skin type and concerns
+- Links to local distributors in Iraq
+- Prices in Iraqi Dinar (IQD)
+
+#### Progress Tracking
+- Compare scans over time
+- Visual progress charts
+- Milestone achievements
+- Weekly/monthly summaries
+
+#### Community Features
+- Share skincare journeys
+- Follow influencers/creators
+- Participate in brand campaigns
+- Learn from video tutorials
+
+### 2.2 Feature Access by Tier
+
+| Feature | Guest | Member | Pro |
+|---------|-------|--------|-----|
+| Daily Scans | 3 | 5 | Unlimited |
+| Scan History | Last scan only | Full history | Full history |
+| Basic Analysis | ✓ | ✓ | ✓ |
+| Advanced Analysis | - | ✓ | ✓ |
+| Product Recommendations | Top 3 | Full list | Full list |
+| Progress Tracking | - | ✓ | ✓ |
+| Routines | View only | 10 routines | Unlimited |
+| Community Viewing | ✓ | ✓ | ✓ |
+| Community Posting | - | ✓ | ✓ |
+| Creator Station | - | - | ✓ |
+| Priority Support | - | - | ✓ |
+| Ad-Free | - | - | ✓ |
+
+---
+
+## 3. User Journey & Flows
+
+### 3.1 New User Onboarding
+
+```
+Download App
+     │
+     ├──► Guest Mode ──► Limited Features ──► Upgrade Prompt
+     │
+     └──► Create Account
+              │
+              ├──► Email Registration
+              │         │
+              │         └──► Email Verification (optional)
+              │
+              └──► Social Login (Google/Apple/Facebook)
+                        │
+                        ▼
+              Skin Questionnaire
+              (Skin type, concerns, routine)
+                        │
+                        ▼
+              First Scan Experience
+                        │
+                        ▼
+              View Results + Recommendations
+                        │
+                        ▼
+              Explore App / Upgrade
+```
+
+### 3.2 Skin Scanning Flow
+
+```
+User taps "Scan" button
+         │
+         ▼
+Camera opens with face guide overlay
+         │
+         ▼
+AI validates face detection
+         │
+         ├─► Face not detected ──► Show guidance
+         │
+         └─► Capture photo
+                   │
+                   ▼
+         Upload to server (encrypted)
+                   │
+                   ▼
+         AI analysis (Hugging Face API)
+                   │
+                   ├─► Processing (show loading)
+                   │
+                   └─► Complete
+                            │
+                            ▼
+                   Display Results Screen
+                   - Overall score
+                   - Detailed metrics
+                   - Concerns identified
+                   - Product recommendations
+                   - Comparison to previous scan
+```
+
+### 3.3 Subscription Upgrade Flow
+
+```
+User views premium feature
+         │
+         ▼
+Upgrade prompt shown
+         │
+         ├──► Select Plan (Member/Pro)
+         │
+         └──► Select Billing (Monthly/Yearly)
+                   │
+                   ▼
+         Payment Method
+         ├── Wallet Balance (if sufficient)
+         └── External Payment
+                   │
+                   ▼
+         Confirmation
+                   │
+                   ▼
+         Features Unlocked Immediately
+```
+
+### 3.4 Product Purchase Flow
+
+```
+User views recommended product
+         │
+         ▼
+Product detail modal
+(Description, ingredients, reviews)
+         │
+         ├──► Add to Favorites
+         │
+         └──► "Shop Now" button
+                   │
+                   ▼
+         Redirect to distributor website
+         (Basra Pharmacy, Baghdad Beauty, etc.)
+                   │
+                   ▼
+         External purchase (tracked via affiliate)
+```
+
+---
+
+## 4. Monetization Model
+
+### 4.1 Revenue Streams
+
+#### 1. Subscription Revenue (Primary)
+| Plan | Monthly | Yearly | Savings |
+|------|---------|--------|---------|
+| Member | 15,000 IQD | 150,000 IQD | 17% |
+| Pro | 35,000 IQD | 350,000 IQD | 17% |
+
+**Target:** 5% conversion from Guest to Member, 10% from Member to Pro
+
+#### 2. Affiliate Commission (Secondary)
+- Commission from partner distributors on product purchases
+- Tracked via unique affiliate links
+- Estimated: 5-15% per sale
+
+#### 3. Brand Partnerships (Growth)
+- Featured product placements
+- Sponsored campaigns
+- Brand communities
+- Cost-per-click advertising
+
+#### 4. Wallet System
+- In-app currency for subscriptions
+- Minimum top-up: 5,000 IQD
+- Users pre-pay, reducing churn
+
+### 4.2 Pricing Strategy Rationale
+
+| Factor | Consideration |
+|--------|---------------|
+| Local Income | Priced for Iraqi middle class |
+| Competition | Lower than international skincare apps |
+| Value Perception | Premium but accessible |
+| Yearly Incentive | 2 months free encourages commitment |
+
+### 4.3 Unit Economics (Projected)
+
+| Metric | Value |
+|--------|-------|
+| CAC (Customer Acquisition Cost) | ~3,000 IQD |
+| LTV (Lifetime Value) - Member | ~120,000 IQD |
+| LTV (Lifetime Value) - Pro | ~350,000 IQD |
+| LTV:CAC Ratio | 40:1 (healthy) |
+| Churn Rate Target | <5% monthly |
+
+---
+
+## 5. Business Rules
+
+### 5.1 User Account Rules
+
+| Rule | Description |
+|------|-------------|
+| Email Uniqueness | One account per email |
+| Guest Sessions | Last 24 hours without registration |
+| Account Deletion | User can delete all data |
+| Password Reset | Email-based, 1-hour expiry |
+| Lockout Policy | 5 failed logins = 15 min lockout |
+
+### 5.2 Scan Rules
+
+| Rule | Guest | Member | Pro |
+|------|-------|--------|-----|
+| Daily Limit | 3 | 5 | Unlimited |
+| Reset Time | Midnight local | Midnight local | N/A |
+| History Retention | Latest only | Forever | Forever |
+| Comparison Feature | No | Yes | Yes |
+
+### 5.3 Subscription Rules
+
+| Rule | Description |
+|------|-------------|
+| Activation | Immediate on payment |
+| Billing Cycle | Start date = subscription date |
+| Auto-Renewal | Yes (can disable) |
+| Grace Period | 3 days for payment failure |
+| Cancellation | Access until period end |
+| Refunds | 14 days if no scans used |
+| Downgrades | Effective at next billing |
+
+### 5.4 Community Rules
+
+| Rule | Description |
+|------|-------------|
+| Post Frequency | Member: 10/day, Pro: 50/day |
+| Comment Limit | 100/day per user |
+| Content Policy | No spam, harassment, explicit content |
+| Flagging | 3 flags = auto-hide for review |
+| Strikes | 3 strikes = suspension |
+| Creator Station | Pro only, 1 per user |
+| Verified Badge | 1000+ followers + review |
+
+### 5.5 Product Rules
+
+| Rule | Description |
+|------|-------------|
+| Recommendations | Based on latest scan |
+| Favorites Limit | 50 products |
+| Price Display | Always in IQD |
+| Stock Status | Synced with distributor |
+| Affiliate Tracking | 30-day cookie |
+
+---
+
+## 6. Market Positioning
+
+### 6.1 Competitive Analysis
+
+| Competitor | Strengths | SkinPAI Differentiator |
+|------------|-----------|------------------------|
+| International Apps | Advanced AI, brand recognition | Local pricing, Arabic support, Iraq distributors |
+| Beauty Salons | Personal touch | Convenience, AI consistency, lower cost |
+| General Health Apps | Established user base | Skincare specialization |
+| Instagram/TikTok | Influencer content | AI analysis + community |
+
+### 6.2 Unique Selling Points
+
+1. **Localized for Iraq**
+   - Arabic language with RTL support
+   - Prices in Iraqi Dinar
+   - Local distributor partnerships
+   - Culturally relevant content
+
+2. **AI-Powered Accuracy**
+   - Consistent analysis (not human bias)
+   - Progress tracking over time
+   - Personalized recommendations
+
+3. **Community + Commerce**
+   - Learn from influencers
+   - Buy from trusted partners
+   - All in one app
+
+4. **Affordable Premium**
+   - Lower cost than competitors
+   - Flexible payment (wallet system)
+   - Guest access for trial
+
+### 6.3 Target User Personas
+
+#### Persona 1: Sarah (Primary)
+- **Age:** 25
+- **Location:** Basra
+- **Income:** Middle class
+- **Concerns:** Acne, oily skin
+- **Behavior:** Active on social media, follows beauty influencers
+- **Need:** Understand her skin, find effective products
+
+#### Persona 2: Fatima (Secondary)
+- **Age:** 35
+- **Location:** Baghdad
+- **Income:** Upper middle class
+- **Concerns:** Early aging signs, pigmentation
+- **Behavior:** Willing to invest in premium products
+- **Need:** Track anti-aging progress, expert recommendations
+
+#### Persona 3: Ahmed (Tertiary)
+- **Age:** 28
+- **Location:** Erbil
+- **Income:** Middle class
+- **Concerns:** Acne scars, basic skincare
+- **Behavior:** New to skincare, wants simple guidance
+- **Need:** Learn basics, build routine
+
+---
+
+## 7. Success Metrics
+
+### 7.1 Key Performance Indicators (KPIs)
+
+#### User Acquisition
+| Metric | Target (Month 3) | Target (Month 12) |
+|--------|------------------|-------------------|
+| Total Downloads | 10,000 | 100,000 |
+| Registered Users | 5,000 | 50,000 |
+| Paying Subscribers | 250 | 5,000 |
+| Member:Pro Ratio | 80:20 | 70:30 |
+
+#### Engagement
+| Metric | Target |
+|--------|--------|
+| DAU/MAU Ratio | >30% |
+| Scans per Active User/Week | 3+ |
+| Session Duration | 5+ minutes |
+| Community Posts/Week | 500+ |
+
+#### Revenue
+| Metric | Target (Month 12) |
+|--------|-------------------|
+| MRR (Monthly Recurring Revenue) | 100M IQD |
+| ARR (Annual Recurring Revenue) | 1.2B IQD |
+| Affiliate Revenue | 20M IQD/month |
+| LTV:CAC | >10:1 |
+
+#### Retention
+| Metric | Target |
+|--------|--------|
+| D1 Retention | 60% |
+| D7 Retention | 40% |
+| D30 Retention | 25% |
+| Monthly Churn (Paid) | <5% |
+
+### 7.2 Tracking & Analytics
+
+| Event | Tracked |
+|-------|---------|
+| App Open | Yes |
+| Scan Started | Yes |
+| Scan Completed | Yes |
+| Product Viewed | Yes |
+| Product Shop Clicked | Yes |
+| Post Created | Yes |
+| Subscription Started | Yes |
+| Subscription Cancelled | Yes |
+| Wallet Top-up | Yes |
+
+### 7.3 Feedback Loops
+
+1. **In-App NPS** (Monthly)
+   - "How likely are you to recommend SkinPAI?"
+   - Target: NPS > 40
+
+2. **Feature Requests**
+   - Community voting system
+   - Prioritize by user tier (Pro > Member > Guest)
+
+3. **Support Tickets**
+   - Response time: <24 hours
+   - Resolution time: <48 hours
+
+4. **App Store Reviews**
+   - Target: 4.5+ stars
+   - Respond to all negative reviews
+
+---
+
+## Appendix: Feature Roadmap (High Level)
+
+### Q1 2026 (Current)
+- ✅ Core scanning functionality
+- ✅ Product recommendations
+- ✅ Community feed
+- ✅ Subscription system
+- ✅ Arabic localization
+
+### Q2 2026
+- [ ] Video tutorials library
+- [ ] Brand campaign system
+- [ ] Push notifications
+- [ ] Routine reminders
+
+### Q3 2026
+- [ ] In-app chat with experts
+- [ ] AR product try-on
+- [ ] Referral program
+- [ ] Gamification (badges, streaks)
+
+### Q4 2026
+- [ ] Expand to other MENA countries
+- [ ] Brand dashboard for partners
+- [ ] Advanced AI (ingredient analysis)
+- [ ] iOS native app
+
+---
+
+**Document maintained by:** SkinPAI Product Team  
+**Questions:** product@skinpai.com
+
